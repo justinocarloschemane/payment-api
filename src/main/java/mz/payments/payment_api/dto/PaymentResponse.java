@@ -11,14 +11,16 @@ public class PaymentResponse {
     private BigDecimal amount;
     private String status;
     private LocalDateTime createdAt;
+    private String mpesaTransactionId;
 
     public PaymentResponse(UUID id, String phoneNumber, BigDecimal amount,
-                           String status, LocalDateTime createdAt) {
+                           String status, LocalDateTime createdAt, String mpesaTransactionId) {
         this.id = id;
         this.phoneNumber = phoneNumber;
         this.amount = amount;
         this.status = status;
         this.createdAt = createdAt;
+        this.mpesaTransactionId = mpesaTransactionId;
     }
 
     public UUID getId() { return id; }
@@ -26,4 +28,5 @@ public class PaymentResponse {
     public BigDecimal getAmount() { return amount; }
     public String getStatus() { return status; }
     public LocalDateTime getCreatedAt() { return createdAt; }
+    public String getMpesaTransactionId() { return mpesaTransactionId; }
 }

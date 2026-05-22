@@ -1,0 +1,1 @@
+ALTER TABLE payments ADD COLUMN mpesa_transaction_id VARCHAR(50);

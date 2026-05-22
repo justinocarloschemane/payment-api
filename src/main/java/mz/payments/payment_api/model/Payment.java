@@ -15,6 +15,9 @@ import java.util.UUID;
 @Table(name = "payments")
 public class Payment {
 
+    @Column
+    private String mpesaTransactionId;
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -46,4 +49,7 @@ public class Payment {
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
     public LocalDateTime getCreatedAt() { return createdAt; }
+    public String getMpesaTransactionId() { return mpesaTransactionId; }
+    public void setMpesaTransactionId(String mpesaTransactionId) { this.mpesaTransactionId = mpesaTransactionId; }
+
 }
